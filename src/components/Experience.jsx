@@ -1,7 +1,6 @@
 import React from 'react'
 import { ExperienceTags } from '../styledComponents/styleTags'
-// import { VerticalTimeline } from 'react-vertical-timeline-component';
-import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
+import { VerticalTimeline } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 import { experiencesArr } from '../data/constants';
 import ExperienceCard from './cards/ExperienceCard';
@@ -10,7 +9,7 @@ const { Container, Wrapper, Title, Desc } = ExperienceTags;
 
 const Experience = () => {
     return (
-        <Container>
+        <Container id='Experience'>
             <Wrapper>
                 <Title>Experience</Title>
                 <Desc

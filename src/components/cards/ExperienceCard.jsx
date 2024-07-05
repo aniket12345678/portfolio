@@ -83,59 +83,60 @@ const ItemWrapper = styled.div`
   gap: 8px;
 `;
 
-const ExperienceCard = ({ data }) => {
-    return (
-        <VerticalTimelineElement
-            icon={
-                <img
-                    width="100%"
-                    height="100%"
-                    alt={data.company}
-                    style={{ borderRadius: "50%", objectFit: "cover" }}
-                    src={data.img}
-                />
-            }
-            contentStyle={{
-                display: "flex",
-                flexDirection: "column",
-                gap: "12px",
-                background: "#1d1836",
-                color: "#fff",
-                boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
-                backgroundColor: "rgba(17, 25, 40, 0.83)",
-                border: "1px solid rgba(255, 255, 255, 0.125)",
-                borderRadius: "6px",
-            }}
-            contentArrowStyle={{
-                borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
-            }}
-        >
-            <Top>
-                <Image src={data.img} />
-                <Body>
-                    <Role>{data.role}</Role>
-                    <Company>{data.company}</Company>
-                    <Date>{data.date}</Date>
-                </Body>
-            </Top>
-            <Description>
-                {data.desc && <Span>{data.desc}</Span>}
-                {data.skills && (
-                    <>
-                        <br />
-                        <Skills>
-                            <b>Skills</b>
-                            <ItemWrapper>
-                                {data.skills?.map((skill, index) => (
-                                    <Skill>• {skill}</Skill>
-                                ))}
-                            </ItemWrapper>
-                        </Skills>
-                    </>
-                )}
-            </Description>
-        </VerticalTimelineElement>
-    )
+const ExperienceCard = ({ data, key }) => {
+  return (
+    <VerticalTimelineElement
+      key={key}
+      icon={
+        <img
+          width="100%"
+          height="100%"
+          alt={data.company}
+          style={{ borderRadius: "50%", objectFit: "cover" }}
+          src={data.img}
+        />
+      }
+      contentStyle={{
+        display: "flex",
+        flexDirection: "column",
+        gap: "12px",
+        background: "#1d1836",
+        color: "#fff",
+        boxShadow: "rgba(23, 92, 230, 0.15) 0px 4px 24px",
+        backgroundColor: "rgba(17, 25, 40, 0.83)",
+        border: "1px solid rgba(255, 255, 255, 0.125)",
+        borderRadius: "6px",
+      }}
+      contentArrowStyle={{
+        borderRight: "7px solid  rgba(255, 255, 255, 0.3)",
+      }}
+    >
+      <Top>
+        <Image src={data.img} />
+        <Body>
+          <Role>{data.role}</Role>
+          <Company>{data.company}</Company>
+          <Date>{data.date}</Date>
+        </Body>
+      </Top>
+      <Description>
+        {data.desc && <Span>{data.desc}</Span>}
+        {data.skills && (
+          <>
+            <br />
+            <Skills>
+              <b>Skills</b>
+              <ItemWrapper>
+                {data.skills?.map((skill, index) => (
+                  <Skill>• {skill}</Skill>
+                ))}
+              </ItemWrapper>
+            </Skills>
+          </>
+        )}
+      </Description>
+    </VerticalTimelineElement>
+  )
 }
 
 export default ExperienceCard
