@@ -1,4 +1,4 @@
-# Aniket Adak - Full Stack Developer
+# Aniket Adak - Software Developer
 
 ## About Me
 I am Aniket Adak, a Full Stack Developer with over 2 years of experience in building and maintaining web applications. I have a strong foundation in both front-end and back-end development, specializing in React.js, Node.js, Express.js, PostgreSQL and MongoDB.
