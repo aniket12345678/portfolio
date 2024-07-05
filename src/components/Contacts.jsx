@@ -1,7 +1,9 @@
 import React from 'react'
-import { ContactTags } from '../styledComponents/styleTags'
-import { useFormik } from 'formik'
 import * as yup from 'yup'
+import { useFormik } from 'formik'
+import nodemailer from 'nodemailer'
+
+import { ContactTags } from '../styledComponents/styleTags'
 
 const {
     ContactButton, ContactForm, ContactInput,
@@ -10,6 +12,7 @@ const {
 } = ContactTags
 
 const Contacts = () => {
+
     const validateFields = yup.object().shape({
         email: yup.string().email('Invalid email').required('Enter email'),
         name: yup.string().required('Enter name'),
@@ -17,7 +20,7 @@ const Contacts = () => {
         message: yup.string().min(8, 'Enter some words').required('Enter message')
     })
 
-    const { values, errors, handleSubmit, handleChange, } = useFormik({
+    const { values, errors, handleSubmit, handleChange } = useFormik({
         initialValues: {
             email: '',
             name: '',
@@ -26,7 +29,27 @@ const Contacts = () => {
         },
         validationSchema: validateFields,
         onSubmit: (values) => {
-            console.log('values:- ', values);
+            console.log('values:- ',values);
+            const transporter = nodemailer.createTransport({
+                service: 'gmail',
+                auth: {
+                    user: process.env.REACT_APP_EMAIL,
+                    pass: process.env.REACT_APP_PASSWORD
+                }
+            });
+            const mailOptions = {
+                to: process.env.REACT_APP_EMAIL,
+                from: values.email,
+                subject: values.subject,
+                text: values.message
+            };
+            transporter.sendMail(mailOptions, function (error, info) {
+                if (error) {
+                    console.log(error);
+                } else {
+                    console.log('Email sent: ' + info.response);
+                }
+            });
         }
     });
 

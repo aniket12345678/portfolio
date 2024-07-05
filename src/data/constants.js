@@ -210,14 +210,13 @@ export const projectsArr = [
       "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
     tags: [
       "React Js",
-      "PostgressSQL",
+      "PostgreSQL",
       "Node Js",
       "Express Js",
       "Redux",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/DecisionHub",
-    webapp: "https://decisionhub.netlify.app/",
+    github: "https://github.com/aniket12345678/finance-tracker-frontend",
   },
   {
     id: 9,
@@ -228,12 +227,6 @@ export const projectsArr = [
     image:
       "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
     tags: [
-      "Docker",
-      "AWS",
-      "DuckDNS",
-      "Eslint",
-      "Husky",
-      "CI/CD",
       "React Js",
       "MongoDb",
       "Node Js",
@@ -241,21 +234,19 @@ export const projectsArr = [
       "Redux",
     ],
     category: "web app",
-    github: "https://github.com/rishavchanda/Trackify",
-    webapp: "https://trackify-management.netlify.app/",
+    github: "https://github.com/aniket12345678/alimento-frontend",
   },
   {
     id: 0,
     title: "Ecommerce",
     date: "Apr 2023 - May 2023",
     description:
-      "Developed a full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
+      "Developed an ecommerce platform where users can buy products full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
     image:
       "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
     tags: ["PHP", "HTML", "CSS", "Bootstrap", "jQuery", "Javascript"],
     category: "web app",
-    github: "https://github.com/rishavchanda/Podstream",
-    webapp: "https://podstream.netlify.app/",
+    github: "https://github.com/aniket12345678/php_ecommerce",
   }
 ];
 
