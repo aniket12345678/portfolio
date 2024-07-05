@@ -1,7 +1,7 @@
 import React from 'react'
 import * as yup from 'yup'
 import { useFormik } from 'formik'
-import nodemailer from 'nodemailer'
+// import nodemailer from 'nodemailer'
 
 import { ContactTags } from '../styledComponents/styleTags'
 
@@ -30,26 +30,26 @@ const Contacts = () => {
         validationSchema: validateFields,
         onSubmit: (values) => {
             console.log('values:- ',values);
-            const transporter = nodemailer.createTransport({
-                service: 'gmail',
-                auth: {
-                    user: process.env.REACT_APP_EMAIL,
-                    pass: process.env.REACT_APP_PASSWORD
-                }
-            });
-            const mailOptions = {
-                to: process.env.REACT_APP_EMAIL,
-                from: values.email,
-                subject: values.subject,
-                text: values.message
-            };
-            transporter.sendMail(mailOptions, function (error, info) {
-                if (error) {
-                    console.log(error);
-                } else {
-                    console.log('Email sent: ' + info.response);
-                }
-            });
+            // const transporter = nodemailer.createTransport({
+            //     service: 'gmail',
+            //     auth: {
+            //         user: process.env.REACT_APP_EMAIL,
+            //         pass: process.env.REACT_APP_PASSWORD
+            //     }
+            // });
+            // const mailOptions = {
+            //     to: process.env.REACT_APP_EMAIL,
+            //     from: values.email,
+            //     subject: values.subject,
+            //     text: values.message
+            // };
+            // transporter.sendMail(mailOptions, function (error, info) {
+            //     if (error) {
+            //         console.log(error);
+            //     } else {
+            //         console.log('Email sent: ' + info.response);
+            //     }
+            // });
         }
     });
 
