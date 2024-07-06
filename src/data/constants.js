@@ -122,6 +122,7 @@ export const experiencesArr = [
   {
     id: 0,
     img: "https://app.capsync.com/static/media/capsync-logo.3dcf29a5.svg",
+    timelineImg: 'https://app.capsync.com/favicon.png',
     role: "Full Stack Developer",
     company: "CapSync",
     date: "Jan 2023 - May 2024",
@@ -139,6 +140,7 @@ export const experiencesArr = [
   {
     id: 1,
     img: "https://fableadtechnolabs.com/static/media/250x150%20(1).b3f5a4db48c7770366ef.webp",
+    timelineImg: 'https://fableadtechnolabs.com/static/media/250x150%20(1).b3f5a4db48c7770366ef.webp',
     role: "Jr. Web developer",
     company: "Fablead Developers Technolab",
     date: "Jan 2022 - Dec 2022",
@@ -156,16 +158,18 @@ export const experiencesArr = [
   {
     id: 2,
     img: "https://media.licdn.com/dms/image/C560BAQG1_pWqhCOmGg/company-logo_200_200/0/1630654946487?e=1727913600&v=beta&t=J6CvyRiugFob5MX6pyTzBbcjHJKw32Xq00pqAY6dWgk",
+    timelineImg: 'https://media.licdn.com/dms/image/C560BAQG1_pWqhCOmGg/company-logo_200_200/0/1630654946487?e=1727913600&v=beta&t=J6CvyRiugFob5MX6pyTzBbcjHJKw32Xq00pqAY6dWgk',
     role: "Research Analyst Intern",
     company: "Rivan Solutions",
     date: "Oct 2021 - Jan 2022",
     desc: "Worked on multiple research projects finding out crucial data points for webscraping. Additionaly I also built one website for the company.",
-    skills: ["Data mining","Microsoft Excel"],
+    skills: ["Data mining", "Microsoft Excel"],
     doc: "https://firebasestorage.googleapis.com/v0/b/flexi-coding.appspot.com/o/1691181448873.jpeg?alt=media&token=ee85eb8f-7247-43cd-9a1d-ce9f58ea62a6",
   },
   {
     id: 3,
     img: "https://static.wixstatic.com/media/4a226c_f7439a286f564c9d951cafa56bf118ba%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/4a226c_f7439a286f564c9d951cafa56bf118ba%7Emv2.jpg",
+    timelineImg:'https://static.wixstatic.com/media/4a226c_f7439a286f564c9d951cafa56bf118ba%7Emv2.jpg/v1/fill/w_192%2Ch_192%2Clg_1%2Cusm_0.66_1.00_0.01/4a226c_f7439a286f564c9d951cafa56bf118ba%7Emv2.jpg',
     role: "Data Analyst Intern",
     company: "Copperpod IP",
     date: "Aug 2021 - Oct 2021",
@@ -206,7 +210,7 @@ export const projectsArr = [
     description:
       "A simple app to manage your finances(assets and liabilities).",
     image:
-      "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
+      "https://www.celoxis.com/cassets/img/pmc/project-management.png",
     tags: [
       "React Js",
       "PostgreSQL",
@@ -224,7 +228,7 @@ export const projectsArr = [
     description:
       "Restaurant website from where you can order food online and book a table.",
     image:
-      "https://user-images.githubusercontent.com/64485885/255202416-e1f89b04-2788-45b0-abc2-9dec616669e2.png",
+      "https://www.celoxis.com/cassets/img/pmc/project-management.png",
     tags: [
       "React Js",
       "MongoDb",
@@ -242,7 +246,7 @@ export const projectsArr = [
     description:
       "Developed an ecommerce platform where users can buy products full-stack web application that allows users to search for, play, and pause their favorite podcasts on demand and create podcasts. Implemented user authentication using Google Auth and Jwt Auth, made responsive user interface with React JS that provides users with a seamless experience across all devices. Practiced agile methodologies to optimize team efficiency and communication.",
     image:
-      "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
+      "https://www.celoxis.com/cassets/img/pmc/project-management.png",
     tags: ["PHP", "HTML", "CSS", "Bootstrap", "jQuery", "Javascript"],
     category: "web app",
     github: "https://github.com/aniket12345678/php_ecommerce",

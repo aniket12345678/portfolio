@@ -4,11 +4,13 @@ import { motion } from "framer-motion"
 import TypewriterComponent from 'typewriter-effect';
 
 import { Bio } from '../data/constants';
-import HeroImg from '../images/heroImg.jpg'
+// import HeroImg from '../images/heroImg.jpg'
+import HeroImg from './HeroImg/1_y6C4nSvy2Woe0m7bWEn4BA-removebg.png'
 import HeroBgAnimation from './HeroBgAnimation'
 import { headContainerAnimation, headContentAnimation, headTextAnimation } from '../utils/motion'
 import StarCanvas from './canvas/Stars'
 import { HeroTags } from '../styledComponents/styleTags';
+import StarReact from './HeroImg/StarReact';
 
 const {
     HeroBg, SubTitle, Img,
@@ -51,11 +53,13 @@ const Hero = () => {
                                 <SubTitle>{Bio.description}</SubTitle>
                             </motion.div>
 
-                            <ResumeButton>Check Resume</ResumeButton>
+                            <ResumeButton href={Bio.resume} target='_blank'>Check Resume</ResumeButton>
                         </HeroLeftContainer>
                         <HeroRightContainer>
                             <motion.div {...headContentAnimation}>
                                 <Tilt>
+                                    {/* <EarthCanvas/> */}
+                                    {/* <StarReact /> */}
                                     <Img src={HeroImg} alt='aniket adak' />
                                 </Tilt>
                             </motion.div>

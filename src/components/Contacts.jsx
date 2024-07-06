@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import * as yup from 'yup'
 import { useFormik } from 'formik'
-// import nodemailer from 'nodemailer'
+import emailjs from '@emailjs/browser';
+import { toast } from 'react-toastify';
 
 import { ContactTags } from '../styledComponents/styleTags'
 
@@ -12,44 +13,42 @@ const {
 } = ContactTags
 
 const Contacts = () => {
+    const [disable, setDisable] = useState(false);
+    const form = useRef();
 
     const validateFields = yup.object().shape({
-        email: yup.string().email('Invalid email').required('Enter email'),
-        name: yup.string().required('Enter name'),
-        subject: yup.string().required('Enter subject'),
+        user_email: yup.string().email('Invalid email').required('Enter email'),
+        from_name: yup.string().required('Enter name'),
+        user_subject: yup.string().required('Enter subject'),
         message: yup.string().min(8, 'Enter some words').required('Enter message')
     })
 
-    const { values, errors, handleSubmit, handleChange } = useFormik({
+    const { values, errors, handleSubmit, handleChange, resetForm } = useFormik({
         initialValues: {
-            email: '',
-            name: '',
-            subject: '',
+            user_email: '',
+            from_name: '',
+            user_subject: '',
             message: ''
         },
         validationSchema: validateFields,
         onSubmit: (values) => {
-            console.log('values:- ',values);
-            // const transporter = nodemailer.createTransport({
-            //     service: 'gmail',
-            //     auth: {
-            //         user: process.env.REACT_APP_EMAIL,
-            //         pass: process.env.REACT_APP_PASSWORD
-            //     }
-            // });
-            // const mailOptions = {
-            //     to: process.env.REACT_APP_EMAIL,
-            //     from: values.email,
-            //     subject: values.subject,
-            //     text: values.message
-            // };
-            // transporter.sendMail(mailOptions, function (error, info) {
-            //     if (error) {
-            //         console.log(error);
-            //     } else {
-            //         console.log('Email sent: ' + info.response);
-            //     }
-            // });
+            setDisable(true);
+            emailjs
+                .sendForm(process.env.REACT_APP_YOUR_SERVICE_ID, process.env.REACT_APP_YOUR_TEMPLATE_ID, form.current, {
+                    publicKey: process.env.REACT_APP_YOUR_PUBLIC_KEY,
+                })
+                .then(
+                    () => {
+                        console.log('SUCCESS!');
+                        toast.success('Thank you for your valuable time');
+                        resetForm();
+                        setDisable(false);
+                    },
+                    (error) => {
+                        toast.error('Some technical issues');
+                        console.log('FAILED...', error.text);
+                    },
+                );
         }
     });
 
@@ -64,28 +63,29 @@ const Contacts = () => {
                 >
                     Feel free to reach out to me.
                 </Desc>
-                <ContactForm onSubmit={handleSubmit}>
+                <ContactForm ref={form} onSubmit={handleSubmit}>
                     <ContactTitle>Let's connect 🚀</ContactTitle>
                     <ContactInput
+                        type='email'
                         onChange={handleChange}
-                        value={values.email}
-                        style={errors.email ? { borderColor: 'red' } : {}}
+                        value={values.user_email}
+                        style={errors.user_email ? { borderColor: 'red' } : {}}
                         placeholder="Your Email"
-                        name="email"
+                        name="user_email"
                     />
                     <ContactInput
                         onChange={handleChange}
-                        value={values.name}
-                        style={errors.name ? { borderColor: 'red' } : {}}
+                        value={values.from_name}
+                        style={errors.from_name ? { borderColor: 'red' } : {}}
                         placeholder="Your Name"
-                        name="name"
+                        name="from_name"
                     />
                     <ContactInput
                         onChange={handleChange}
-                        value={values.subject}
-                        style={errors.subject ? { borderColor: 'red' } : {}}
+                        value={values.user_subject}
+                        style={errors.user_subject ? { borderColor: 'red' } : {}}
                         placeholder="Subject"
-                        name="subject"
+                        name="user_subject"
                     />
                     <ContactInputMessage
                         style={errors.message ? { borderColor: 'red' } : {}}

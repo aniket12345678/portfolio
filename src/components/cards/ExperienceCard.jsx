@@ -93,7 +93,7 @@ const ExperienceCard = ({ data, key }) => {
           height="100%"
           alt={data.company}
           style={{ borderRadius: "50%", objectFit: "cover" }}
-          src={data.img}
+          src={data.timelineImg}
         />
       }
       contentStyle={{
