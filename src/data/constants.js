@@ -113,6 +113,11 @@ export const skillsArr = [
         name: "Postman",
         image:
           "https://static-00.iconduck.com/assets.00/postman-icon-497x512-beb7sy75.png",
+      },
+      {
+        name: "AWS(S3)",
+        image:
+          "https://w7.pngwing.com/pngs/564/59/png-transparent-amazon-com-amazon-s3-amazon-web-services-amazon-simple-queue-service-amazon-glacier-bucket-miscellaneous-data-amazon-dynamodb-thumbnail.png",
       }
     ],
   },

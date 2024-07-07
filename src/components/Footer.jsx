@@ -1,5 +1,5 @@
 import React from 'react'
-import { FacebookRounded, Instagram, LinkedIn, Twitter } from "@mui/icons-material";
+import { FacebookRounded, LinkedIn } from "@mui/icons-material";
 
 import { FooterTags } from '../styledComponents/styleTags'
 import { Bio } from '../data/constants';
@@ -26,15 +26,9 @@ const Footer = () => {
                     <SocialMediaIcon href={Bio.facebook} target="display">
                         <FacebookRounded />
                     </SocialMediaIcon>
-                    {/* <SocialMediaIcon href={Bio.twitter} target="display">
-                        <Twitter />
-                    </SocialMediaIcon> */}
                     <SocialMediaIcon href={Bio.linkedin} target="display">
                         <LinkedIn />
                     </SocialMediaIcon>
-                    {/* <SocialMediaIcon href={Bio.insta} target="display">
-                        <Instagram />
-                    </SocialMediaIcon> */}
                 </SocialMediaIcons>
                 <Copyright>&copy; 2024 Aniket Adak. All rights reserved.</Copyright>
             </FooterWrapper>

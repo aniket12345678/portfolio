@@ -47,17 +47,6 @@ const Date = styled.div`
   }
 `;
 
-const Description = styled.div`
-  width: 100%;
-  font-size: 15px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 99};
-  margin-bottom: 10px;
-  @media only screen and (max-width: 768px) {
-    font-size: 12px;
-  }
-`;
-
 const Grade = styled.div`
   font-size: 14px;
   font-weight: 500;
@@ -65,10 +54,6 @@ const Grade = styled.div`
   @media only screen and (max-width: 768px) {
     font-size: 12px;
   }
-`;
-const Span = styled.div`
-  display: -webkit-box;
-  max-width: 100%;
 `;
 
 const EducationCard = ({data}) => {

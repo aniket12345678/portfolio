@@ -96,7 +96,7 @@ const Contacts = () => {
                         rows={4}
                     />
                     <div style={{ textAlign: 'center' }}>
-                        <ContactButton type="submit" >Send</ContactButton>
+                        <ContactButton type="submit" disabled={disable}>Send</ContactButton>
                     </div>
                 </ContactForm>
             </Wrapper>
