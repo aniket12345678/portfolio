@@ -130,7 +130,7 @@ export const experiencesArr = [
     timelineImg: 'https://app.capsync.com/favicon.png',
     role: "Full Stack Developer",
     company: "CapSync",
-    date: "Jan 2023 - May 2024",
+    date: "Jan 2023 - Jan 2025",
     desc: "Integrated finance APIs like Plaid and Quickbooks in the application to automate the syncing of banking and business accounts using React js, Node js and Express js.Created webhooks for the finance APIs to facilitate real-time data transfer, processing and maintenance for future purposes.",
     skills: [
       "ReactJS",
