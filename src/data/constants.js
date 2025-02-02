@@ -8,7 +8,7 @@ export const Bio = {
     "I am a motivated and versatile individual, always eager to take on new challenges. With a passion for learning I am dedicated to delivering high-quality results. With a positive attitude and a growth mindset, I am ready to make a meaningful contribution and achieve great things.",
   github: "https://github.com/aniket12345678",
   resume:
-    "https://drive.google.com/file/d/13sOx7EYTTuTMq0mh627EOyIdIC1e9qnq/view",
+    "https://drive.google.com/file/d/1Jqa8qembxuvon-_W7ZUDn-XN7rdjgFcU/view",
   linkedin: "https://www.linkedin.com/in/aniket-adak-3b46b4134/",
   twitter: "https://x.com/adak_anike57752",
   facebook: "https://www.facebook.com/aniket.adak.543/",
